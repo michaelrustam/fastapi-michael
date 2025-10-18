@@ -4,7 +4,9 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/michaelrustam/fastapi-michael.git'
+                git branch: 'master',
+                    url: 'https://github.com/michaelrustam/fastapi-michael.git',
+                    credentialsId: 'jenkins-private-michael'
             }
         }
 
